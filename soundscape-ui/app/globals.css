@@ -1,10 +1,10 @@
-:root{--bg:#555555;--fg:#e9edf5;--mute:#f8f8f8;--cool:#9fd0ff;--warm:#ffb454;--line:rgba(255,255,255,.12)}
+:root{--bg:#12141a;--fg:#e9edf5;--mute:#8b95a5;--cool:#9fd0ff;--warm:#ffb454;--line:rgba(255,255,255,.12)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font:900 1rem/1.0 var(--font-sans),system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--fg);font:900 1rem/0.5 var(--font-sans),system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 :focus-visible{outline:2px solid var(--cool);outline-offset:4px}
 
 /* Hero */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(1.25rem,6vw,6rem) 15vh;overflow:hidden;background:radial-gradient(70% 60% at 70% 40%,#6a6a6a,transparent 70%)}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(1.25rem,6vw,6rem) 15vh;overflow:hidden;background:radial-gradient(70% 60% at 70% 40%,rgba(159,208,255,.15),transparent 70%)}
 .wave{position:absolute;inset:0;width:100%;height:100%;animation:fade 2.5s 1s both}
 .lb{position:absolute;left:0;right:0;background:#1a1a1a;z-index:3}
 .lb.top{top:0}.lb.bot{bottom:0}
