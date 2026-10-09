@@ -1,6 +1,6 @@
 :root{--bg:#12141a;--fg:#e9edf5;--mute:#8b95a5;--cool:#9fd0ff;--warm:#ffb454;--line:rgba(255,255,255,.12)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font:900 1rem/0.5 var(--font-sans),system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.5 var(--font-sans),system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 :focus-visible{outline:2px solid var(--cool);outline-offset:4px}
 
 /* Hero */
@@ -11,7 +11,7 @@ body{background:var(--bg);color:var(--fg);font:900 1rem/0.5 var(--font-sans),sys
 h1{position:relative;z-index:2;font:800 clamp(2.8rem,8vw,7.5rem)/.98 var(--font-serif);letter-spacing:-.025em}
 .mask{display:block;overflow:hidden;padding-bottom:.08em}
 .mask>span{display:block}
-.lead{position:relative;z-index:2;max-width:34rem;margin-top:1.75rem;color:var(--mute)}
+.lead{position:relative;z-index:2;max-width:34rem;margin-top:1.75rem;color:var(--mute);font-family:var(--font-sans)}
 
 /* Sections */
 .section{max-width:1120px;margin:auto;padding:9rem clamp(1.25rem,6vw,3rem)}
