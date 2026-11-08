@@ -75,7 +75,7 @@ By combining reliable IoT microcontrollers with high-fidelity acoustic sensors a
 
 ---
 
-## 💻 Usage
+## Usage
 
 1. **Power on the Device:** Once powered, the system will automatically connect to the configured Wi-Fi and MQTT broker.
 2. **Monitor Serial Output:** Open the Serial Monitor (baud rate: 115200) to verify successful connection and sensor initialization.
