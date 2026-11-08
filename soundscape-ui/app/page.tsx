@@ -13,26 +13,18 @@ export default function Page() {
   const t = useTelemetry();
 
   return (
-    <MotionConfig reducedMotion="never">
+    <MotionConfig reducedMotion="user">
       <main>
         <header className="hero">
           <WaveCanvas ambient={norm(t.ambientDb)} masking={norm(t.maskingDb)} />
-          {(["top", "bot"] as const).map((pos) => (
-            <motion.div
-              key={pos}
-              className={`lb ${pos}`}
-              initial={{ height: "50%" }}
-              animate={{ height: "7%" }}
-              transition={{ duration: 1.6, ease, delay: 0.3 }}
-            />
-          ))}
+          <p className="eyebrow">Soundscape / Ambient intelligence</p>
           <h1>
             {lines.map((l, i) => (
               <span className="mask" key={l}>
                 <motion.span
-                  initial={{ y: "105%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1.2, ease, delay: 1.4 + i * 0.18 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, ease, delay: 0.15 + i * 0.18 }}
                 >
                   {l}
                 </motion.span>
@@ -43,7 +35,7 @@ export default function Page() {
             className="lead"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 2.2 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             An IoT-driven data telemetry system for automated ambient soundscape regulation.
           </motion.p>

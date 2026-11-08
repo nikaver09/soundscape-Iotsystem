@@ -12,22 +12,25 @@ export default function Pipeline() {
   return (
     <section className="section" aria-labelledby="how">
       <h2 id="how">How the system works</h2>
-      <ol className="steps">
+      <div className="pipeline">
         <motion.span
           className="rail"
+          aria-hidden="true"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ duration: 1.8, ease: "easeInOut" }}
         />
-        {steps.map((s, i) => (
-          <li key={s.title}>
-            <span className="n">{i + 1}</span>
-            <h3>{s.title}</h3>
-            <p>{s.body}</p>
-          </li>
-        ))}
-      </ol>
+        <ol className="steps">
+          {steps.map((s, i) => (
+            <li key={s.title}>
+              <span className="n">{i + 1}</span>
+              <h3>{s.title}</h3>
+              <p>{s.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
