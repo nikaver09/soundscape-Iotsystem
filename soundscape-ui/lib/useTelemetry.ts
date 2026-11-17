@@ -5,14 +5,12 @@ export interface Telemetry {
   ambientDb: number;
   maskingDb: number;
   targetDb: number;
-  temp: number;
-  humidity: number;
   status: "Holding target" | "Adjusting" | "Masking noise";
 }
 
 const TARGET = 45;
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
-const initial: Telemetry = { ambientDb: 44, maskingDb: 20, targetDb: TARGET, temp: 24.5, humidity: 52, status: "Holding target" };
+const initial: Telemetry = { ambientDb: 44, maskingDb: 20, targetDb: TARGET, status: "Holding target" };
 
 /** Simulated sensor feed. Swap the interval for your MQTT / WebSocket / REST source. */
 export function useTelemetry(intervalMs = 1200): Telemetry {
@@ -30,8 +28,6 @@ export function useTelemetry(intervalMs = 1200): Telemetry {
           ...p,
           ambientDb,
           maskingDb: p.maskingDb + (goal - p.maskingDb) * 0.4,
-          temp: clamp(p.temp + (Math.random() - 0.5) * 0.2, 22, 28),
-          humidity: clamp(p.humidity + (Math.random() - 0.5) * 0.8, 40, 65),
           status: error > 8 ? "Masking noise" : error > 2 ? "Adjusting" : "Holding target",
         };
       });

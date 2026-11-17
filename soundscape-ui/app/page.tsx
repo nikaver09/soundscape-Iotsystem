@@ -3,6 +3,7 @@ import { MotionConfig, motion } from "framer-motion";
 import WaveCanvas from "@/components/WaveCanvas";
 import Pipeline from "@/components/Pipeline";
 import Readout from "@/components/Readout";
+import Logo from "@/components/Logo";
 import { useTelemetry } from "@/lib/useTelemetry";
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -17,7 +18,8 @@ export default function Page() {
       <main>
         <header className="hero">
           <WaveCanvas ambient={norm(t.ambientDb)} masking={norm(t.maskingDb)} />
-          <p className="eyebrow">Soundscape / Ambient intelligence</p>
+          <div className="hero-brand"><Logo /></div>
+          <p className="eyebrow">Ambient intelligence</p>
           <h1>
             {lines.map((l, i) => (
               <span className="mask" key={l}>

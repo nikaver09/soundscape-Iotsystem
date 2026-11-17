@@ -18,6 +18,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Soundscape-system",
+  icons: { icon: "/logo.svg" },
   description: "An IoT-driven data telemetry system for automated ambient soundscape regulation.",
 };
 

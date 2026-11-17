@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { title: "Listen", body: "Microphones and climate sensors measure the room every second." },
+  { title: "Listen", body: "Microphones measure room noise every second." },
   { title: "Send", body: "Each node streams its readings to the cloud as they happen." },
   { title: "Understand", body: "Software finds noise that crosses the comfort threshold." },
   { title: "Respond", body: "Speakers add masking sound until the room settles." },
