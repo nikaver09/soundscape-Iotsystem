@@ -35,7 +35,7 @@ export default function DownloadMenu() {
         </summary>
         <div className="download-options">
           <p>Soundscape for Android</p>
-          <a href="/downloads/Soundscape.apk" download="Soundscape.apk">Download Android APK <span>.apk</span></a>
+          <a href="/downloads/Soundscape.zip" download="Soundscape.zip">Download Android app <span>.zip</span></a>
         </div>
       </details>
     </section>
