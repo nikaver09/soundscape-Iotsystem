@@ -2,7 +2,7 @@
 import { MotionConfig, motion } from "framer-motion";
 import WaveCanvas from "@/components/WaveCanvas";
 import Pipeline from "@/components/Pipeline";
-import Readout from "@/components/Readout";
+import DownloadMenu from "@/components/DownloadMenu";
 import Logo from "@/components/Logo";
 import { useTelemetry } from "@/lib/useTelemetry";
 
@@ -43,8 +43,9 @@ export default function Page() {
           </motion.p>
         </header>
         <Pipeline />
-        <Readout t={t} />
+        <DownloadMenu />
       </main>
     </MotionConfig>
   );
 }
+
